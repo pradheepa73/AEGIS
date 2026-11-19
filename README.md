@@ -1,3 +1,4 @@
+
 <div align="center">
 
 # 🛡️ AEGIS
@@ -12,7 +13,7 @@ Five cyber security tasks. One codebase. Fully integrated.
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.4%2B-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)](https://scikit-learn.org/)
 [![Tests](https://img.shields.io/badge/tests-10%20passed-brightgreen?style=flat-square)](#testing)
 
-[Overview](#overview) · [Architecture](#architecture) · [Quickstart](#quickstart) · [Tasks](#tasks) · [API](#api-reference)
+[Overview](#overview) · [Architecture](#architecture) · [Preview](#dashboard-preview) · [Quickstart](#quickstart) · [Tasks](#tasks)
 
 </div>
 
@@ -73,6 +74,22 @@ Instead of five disconnected scripts, AEGIS demonstrates how **detection, analys
 
 ---
 
+## Dashboard Preview
+
+Here is the live interface for the five integrated modules.
+
+<div align="center">
+  <img src="Evidence/01_Packet_Analyzer.png" width="48%" alt="Packet Analyzer">
+  <img src="Evidence/02_Phishing_detection.png" width="48%" alt="Phishing Detection">
+  <br><br>
+  <img src="Evidence/03_Code_Analyser.png" width="48%" alt="Code Analyzer">
+  <img src="Evidence/04_NIDS.png" width="48%" alt="Network IDS">
+  <br><br>
+  <img src="Evidence/05_Secure_sharing.png" width="48%" alt="Secure Sharing">
+</div>
+
+---
+
 ## Tasks
 
 | # | Task | Module | Approach |
@@ -82,6 +99,8 @@ Instead of five disconnected scripts, AEGIS demonstrates how **detection, analys
 | 3 | **Secure Code Assessment** | `modules/code_sentinel` | Inter-procedural AST taint analysis + lexical rules |
 | 4 | **Network Intrusion Detection** | `modules/net_radar` | Isolation Forest + MITRE ATT&CK stage classifier |
 | 5 | **Secure File Sharing** | `modules/drop_vault` | X25519 + AES-GCM zero-knowledge + HMAC one-time tokens |
+
+
 
 ### Task 2 — PhishGuard
 
@@ -106,6 +125,8 @@ Trained on a merged corpus, evaluated on six independent sources:
 | Nigerian Fraud | 3,331 | 0.998 | 1.000 | 0.998 | 0.999 |
 | SpamAssassin | 5,806 | 0.823 | 0.627 | 0.995 | 0.769 |
 
+
+
 **Result:** 82–100% accuracy across six independent corpora — the model generalizes.
 
 ### Task 3 — CodeSentinel
@@ -127,6 +148,7 @@ Detected categories:
 - Weak crypto (MD5, SHA1, ECB mode)
 - Hardcoded secrets (API keys, passwords, tokens)
 
+
 ### Task 4 — NetRadar
 
 Two-model NIDS:
@@ -144,6 +166,7 @@ TLS SNI on suspicious TLD                 (sid:9000004)
 ```
 
 Auto-block via `iptables` / `pfctl`, alerts via Telegram.
+
 
 ### Task 5 — DropVault
 
@@ -178,8 +201,8 @@ Per-user access anomalies detected via **EWMA + z-score** — no global model tr
 ### Install
 
 ```bash
-git clone https://github.com/pradheepa73/CODSOFT_TASKS.git aegis
-cd aegis
+git clone https://github.com/pradheepa73/AEGIS.git
+cd AEGIS
 
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1         # Windows
@@ -335,8 +358,6 @@ aegis/
 ---
 
 ## Acknowledgments
-
-Built for the **CodSoft Cyber Security Internship** (2026).
 
 Datasets:
 - [Phishing Email Dataset](https://www.kaggle.com/datasets/naserabdullahalam/phishing-email-dataset) — merged corpus of CEAS 2008, Enron, Ling, Nazario, Nigerian Fraud, and SpamAssassin

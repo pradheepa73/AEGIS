@@ -1,0 +1,6 @@
+{
+  "phish_text_vec.pkl": "0d782e9724d4f14e8a846170d6a629fee371bd2ab627acd5b2204895e98ce3c9",
+  "phish_text_clf.pkl": "14085170520acc3c64f871fab6ffafbb6fba645f250f68e33866d92463f1a139",
+  "phish_url_vec.pkl": "590c66627920f77c610b123c8a12a03cb660b14beb92147211f6fc8410622765",
+  "phish_url_clf.pkl": "4032754d341adf1e3df598e03d4cab6bd4487ca5120e15dddcee9f006ffef6a2"
+}
